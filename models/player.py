@@ -13,4 +13,4 @@ class Player(Base):
     ranking: Mapped[int] = mapped_column(Integer)
     profilepicurl: Mapped[str] = mapped_column(String)
     goat: Mapped[bool] = mapped_column(Boolean)
-    votes: Mapped[list[int]] = mapped_column(JSON, default=set)
+    votes: Mapped[list[int]] = mapped_column(JSON, default=list)
