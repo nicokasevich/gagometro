@@ -29,9 +29,7 @@ def update_player(
     player: PlayerUpdate,
     player_repository: PlayerRepository = Depends(),
 ) -> PlayerSchema:
-    player = player_repository.get_player(player_id)
-
-    if not player:
+    if not player_repository.get_player(player_id):
         raise HTTPException(status_code=404, detail="Player not found")
 
     return player_repository.update_player(player_id, player)
