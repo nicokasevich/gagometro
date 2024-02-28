@@ -9,3 +9,13 @@ pip install -r requirements.txt
 ```
 uvicorn main:create_app --factory
 ```
+
+### Usage
+
+```
+Swagger /docs
+```
+
+```
+Admin panel /admin
+```
